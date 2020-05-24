@@ -2,10 +2,10 @@
   "name": "excel-course",
   "version": "1.0.0",
   "description": "LearnJS",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
     "test": "test",
-    "build": "webpack",
+    "build": "webpack --mode production",
     "serve": "webpack --watch"
   },
   "repository": {
@@ -17,13 +17,15 @@
     "js",
     "senior"
   ],
-  "author": "Ilya Efimov",
+  "author": "Ilya Efimov <efimov.iliya@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Bromka/excel-course/issues"
   },
   "homepage": "https://github.com/Bromka/excel-course#readme",
+  "private": true,
   "devDependencies": {
-    "webpack": "^4.43.0"
+    "webpack": "^4.43.0",
+    "webpack-cli": "3.3.11"
   }
 }
