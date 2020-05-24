@@ -1,1 +1,2 @@
-console.log ('module export');
+console.log('module export');
+
