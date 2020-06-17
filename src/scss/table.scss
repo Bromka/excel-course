@@ -30,6 +30,7 @@
     border-top: none;
     border-left: none;
     background: #f8f9fa;
+    position: relative;
 
 
   }
@@ -50,6 +51,7 @@
     align-items: center;
     min-width: $info-cell-width;
     width: $cell-width;
+    position: relative;
 
     border: 1px solid $border-color;
     border-top: none;
@@ -57,6 +59,8 @@
 
     height: 100%;
     background: #f8f9fa;
+
+
 
 
   }
@@ -79,10 +83,40 @@
 
     &.selected{
       border: none;
-      outline: 2px solid #1a73e8;
+      outline: 2px solid $primary-color;
       z-index: 2;
 
 
+
+    }
+  }
+
+  .col-resize{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 4px;
+    background-color: $primary-color;
+    opacity: 0;
+    &:hover{
+      opacity: 1;
+      cursor: col-resize;
+    }
+  }
+
+  .row-resize{
+    position: absolute;
+
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 4px;
+    background-color: $primary-color;
+    opacity: 0;
+    &:hover{
+      opacity: 1;
+      cursor: row-resize;
     }
   }
 
