@@ -34,6 +34,29 @@ class Dom {
   off(eventType, callback) {
     this.$el.removeEventListener(eventType, callback);
   }
+
+  closest(selector) {
+    return $(this.$el.closest(selector));
+  }
+  getCoords() {
+    return this.$el.getBoundingClientRect();
+  }
+  show() {
+    this.$el.style.opacity = '1';
+  }
+  setLeft(coord) {
+    this.$el.style.left = parseInt(coord) + 'px';
+  }
+  hide() {
+    this.$el.style.opacity = '0';
+  }
+  selectableOff() {
+    this.$el.style.userSelect = 'none';
+  }
+
+  selectableOn() {
+    this.$el.style.userSelect = 'auto';
+  }
 }
 
 export function $(selector) {

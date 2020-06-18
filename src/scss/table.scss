@@ -120,6 +120,30 @@
     }
   }
 
+  .table-line-col{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: $primary-color;
+    z-index: 3;
+    opacity: 0;
+    width: 2px;
+  }
+
+  .table-line-row{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: $primary-color;
+    z-index: 3;
+    opacity: 1;
+    height: 2px;
+
+
+  }
+
 
 
 
