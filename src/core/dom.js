@@ -47,6 +47,10 @@ class Dom {
   setLeft(coord) {
     this.$el.style.left = parseInt(coord) + 'px';
   }
+
+  setTop(coord) {
+    this.$el.style.top = parseInt(coord) + 'px';
+  }
   hide() {
     this.$el.style.opacity = '0';
   }
