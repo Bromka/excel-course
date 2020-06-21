@@ -61,6 +61,18 @@ class Dom {
   selectableOn() {
     this.$el.style.userSelect = 'auto';
   }
+  get data() {
+    return this.$el.dataset;
+  }
+
+  selectAll(selector) {
+    return this.$el.querySelectorAll(selector)
+  }
+  css(style = {}) {
+    Object.keys(style).forEach((key) =>{
+      this.$el.style[key] = style[key];
+    })
+  }
 }
 
 export function $(selector) {
