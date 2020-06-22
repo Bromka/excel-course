@@ -10,12 +10,15 @@ export function createTable(row = 15) {
   return table;
 }
 function createRow(rowNumber) {
-  const rowInfoData = rowNumber === 0 ? '' : rowNumber;
+  const rowResizeBlock = `<div data-resize="row" class="row-resize"></div>`
+  const rowInfoData = rowNumber === 0 ? '' : rowNumber+rowResizeBlock;
   const rowData = `<div class="row-data">${createColumn(rowNumber)}</div>`;
   let Row = ''
-  Row += `<div class="row">
+  Row += `<div class="row" data-res="true">
                 <div class="row-info">
                     ${rowInfoData}
+                    
+                    
                 </div>
                 ${rowData}
             </div>`
@@ -31,6 +34,6 @@ function createColumn(rowNumber) {
 }
 
 function columnData(rowNumber, index) {
-  const Data = rowNumber === 0 ? `<div class="column">${String.fromCharCode(index)}</div>` : `<div class="cell" contenteditable spellcheck="false"></div>`;
+  const Data = rowNumber === 0 ? `<div class="column" data-res="true" data-column-number="${index-charCode.A}">${String.fromCharCode(index)}<div class="col-resize" data-resize="col"></div></div>` : `<div class="cell" contenteditable spellcheck="false" data-column-number="${index-charCode.A}"></div>`;
   return Data;
 }

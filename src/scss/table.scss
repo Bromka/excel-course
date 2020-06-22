@@ -7,19 +7,15 @@
   right: 0;
   top: $header-height + $toolbar-height + $formula-height;
   padding-bottom: 2px;
-
-
   overflow-x: auto;
 
-  .row{
+  .row {
     display: flex;
     flex-direction: row;
     min-height: 20px;
     height: $row-height;
-
-
   }
-  .row-info{
+  .row-info {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,38 +26,30 @@
     border-top: none;
     border-left: none;
     background: #f8f9fa;
+    position: relative;
 
 
   }
-  .row-data{
+
+  .row-data {
     display: flex;
-
-
-
-
-
-
-
   }
 
-  & .column{
+  & .column {
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: $info-cell-width;
     width: $cell-width;
-
+    position: relative;
     border: 1px solid $border-color;
     border-top: none;
     border-left: none;
-
     height: 100%;
     background: #f8f9fa;
-
-
   }
 
-  .cell{
+  .cell {
     min-width: 40px;
     padding: 5px;
     width: $cell-width;
@@ -75,18 +63,71 @@
     white-space: nowrap;
 
 
-
-
-    &.selected{
+    &.selected {
       border: none;
-      outline: 2px solid #1a73e8;
+      outline: 2px solid $primary-color;
       z-index: 2;
 
 
     }
   }
 
+  .col-resize {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 4px;
+    background-color: $primary-color;
+    opacity: 0;
+    z-index: 1000;
 
+    &:hover {
+      opacity: 1;
+      cursor: col-resize;
+    }
+  }
+
+  .row-resize {
+    position: absolute;
+
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 4px;
+    background-color: $primary-color;
+    opacity: 0;
+    z-index: 1000;
+
+    &:hover {
+      opacity: 1;
+      cursor: row-resize;
+    }
+  }
+
+  .table-line-col {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: $primary-color;
+    z-index: 3;
+    opacity: 0;
+    width: 2px;
+  }
+
+  .table-line-row {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: $primary-color;
+    z-index: 3;
+    opacity: 0;
+    height: 2px;
+
+
+  }
 
 
 }
