@@ -18,7 +18,6 @@ export class Table extends ExcelComponent {
 
     onMousedown(event) {
       if (shouldResize(event)) {
-        console.log('shouldResize');
         resizeTable(event, this.$root)
       }
     }
