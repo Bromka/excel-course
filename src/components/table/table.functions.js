@@ -49,6 +49,7 @@ export function resizeTable(e, $root) {
       }
 
       $root.selectableOn();
+      document.onmouseup = null;
       document.onmousemove = null;
     }
   }
