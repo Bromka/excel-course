@@ -58,3 +58,10 @@ export function resizeTable(e, $root) {
 export function shouldResize(event) {
   return event.target.dataset.resize
 }
+export function isCell(event) {
+  if (event.target.dataset.id) {
+    return true
+  }
+}
+
+
